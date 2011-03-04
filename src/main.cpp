@@ -43,21 +43,21 @@ int main(int argc, char** args)
 {
 	try
 	{
-		game = new OpenXcom::Game("OpenXcom", 320, 200, 8);
+		game = new OpenXcom::Game("OpenXcom", 320, 200, 16);
 		
 		// Handles command line arguments
-		int width = 640;
-		int height = 400;
-		for (int i = 1; i < argc; i++)
-		{
-			if (strcmp(args[i], "-fullscreen") == 0)
-				game->getScreen()->setFullscreen(true);
-			if (strcmp(args[i], "-width") == 0 && argc > i + 1)
-				width = atoi(args[i+1]);
-			if (strcmp(args[i], "-height") == 0 && argc > i + 1)
-				height = atoi(args[i+1]);
-		}
-		game->getScreen()->setResolution(width, height);
+// 		int width = 640;
+// 		int height = 400;
+// 		for (int i = 1; i < argc; i++)
+// 		{
+// 			if (strcmp(args[i], "-fullscreen") == 0)
+// 				game->getScreen()->setFullscreen(true);
+// 			if (strcmp(args[i], "-width") == 0 && argc > i + 1)
+// 				width = atoi(args[i+1]);
+// 			if (strcmp(args[i], "-height") == 0 && argc > i + 1)
+// 				height = atoi(args[i+1]);
+// 		}
+// 		game->getScreen()->setResolution(width, height);
 		game->setState(new OpenXcom::StartState(game));
 		game->run();
 	}
