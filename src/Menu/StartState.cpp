@@ -29,7 +29,7 @@
 namespace OpenXcom
 {
 
-#define DATA_FOLDER "./DATA/"
+#define DATA_FOLDER "/sdcard/app-data/com.sirnacnud.openxcom/DATA/"
 
 /**
  * Initializes all the elements in the Loading screen.
